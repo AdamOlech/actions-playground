@@ -1,0 +1,15 @@
+on: [push]
+
+name: test
+
+jobs:
+  simpleExample:
+    runs-on: ubuntu-18.04
+    steps:
+    # checkout branch
+    - uses: actions/checkout@master
+    - run: cat /etc/os-release
+    - run: uname -a
+    - run: uptime
+    - run: cal
+    - run: sleep 100
